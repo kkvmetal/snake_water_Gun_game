@@ -35,18 +35,28 @@ def start_play():
         player_choice = player_input()
         computer_choice = computer_input()
 
-        if player_choice =='Snake' and (computer_choice!='Gun' or computer_choice=='Snake'):
+        if player_choice =='Snake' and (computer_choice!='Gun' and computer_choice!='Snake'):
+            print(f'Player Choice is: {player_choice}')
+            print(f'Computer Choice is: {computer_choice}')
             print("Player Wins")
             player_score+=1
-        elif player_choice =='Water' and (computer_choice!='Snake' or computer_choice =='Water'):
+        elif player_choice =='Water' and (computer_choice!='Snake' and computer_choice !='Water'):
+            print(f'Player Choice is: {player_choice}')
+            print(f'Computer Choice is: {computer_choice}')
             print("Player Wins")
             player_score+=1
-        elif player_choice =='Gun' and (computer_choice!='Water' or computer_choice =='Gun'):
+        elif player_choice =='Gun' and (computer_choice!='Water' and computer_choice !='Gun'):
+            print(f'Player Choice is: {player_choice}')
+            print(f'Computer Choice is: {computer_choice}')
             print("Player Wins")
             player_score+=1
         elif player_choice == computer_choice:
+            print(f'Player Choice is: {player_choice}')
+            print(f'Computer Choice is: {computer_choice}')
             print("Its a Tie")
         else:
+            print(f'Player Choice is: {player_choice}')
+            print(f'Computer Choice is: {computer_choice}')
             print('Computer Wins')
             computer_score+=1
         n+=1
